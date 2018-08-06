@@ -1,0 +1,36 @@
+@import 'Const';
+
+.page--sitedown {
+
+    .sitedown {
+        min-width: 36%;
+        margin-top: $unit*8;
+        padding: $unit*4;
+
+        background: $white;
+        border-radius: $unit/4;
+        font-size: 32px;
+        text-align: center;
+
+        opacity: 0.96;
+
+        .sitedown__decor {
+            font-weight: 600;
+        }
+        .sitedown__text {
+        }
+    }
+}
+.fixed-bottom-right {
+    position: fixed;
+    right: $unit;
+    bottom: $unit;
+
+    .button__text {
+        font-size: 26px;
+    }
+}
+.tooltip__text {
+    font-size: $font-title;
+    padding: $unit*3;
+}
