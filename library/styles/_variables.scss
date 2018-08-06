@@ -7,6 +7,21 @@ $breakpoint-md: 960px;
 $breakpoint-lg: 1280px;
 $breakpoint-xl: 1920px;
 
+/* --- Fonts --- */
+@font-face {
+    font-family: "Raleway";
+    src: url('/resources/fonts/Raleway.ttf');
+}
+@font-face {
+    font-family: "SignPainter";
+    src: url('/resources/fonts/SignPainter-HouseScript.ttf');
+}
+
 /* --- Colors --- */
 $black: #000000;
 $white: #FFFFFF;
+$red-light: #f8d7da;
+$brown-dark: #2a1e04;
+$brown-med: #d8d0c5;
+$brown-light: #f2f1ed;
+$brown-text: #938777;

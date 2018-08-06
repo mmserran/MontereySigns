@@ -1,36 +1,29 @@
 @import 'Const';
 
 .page--sitedown {
+    background: $brown-text;
 
-    .sitedown {
-        min-width: 36%;
-        margin-top: $unit*8;
-        padding: $unit*4;
-
-        background: $white;
-        border-radius: $unit/4;
-        font-size: 32px;
-        text-align: center;
-
-        opacity: 0.96;
-
-        .sitedown__decor {
-            font-weight: 600;
+    .message {
+        margin-top: 10%;
+        @include layout('gt-sm') {
+            margin-top: 200px;
         }
-        .sitedown__text {
+        min-height: 100px;
+        min-width: 100px;
+        background: $brown-light;
+
+        .message__img {
+            max-width: 200px;
+            margin: $unit*2;
+        }
+        .message__text {
+            margin: $unit*2 $unit*2 0;
+            padding: $unit*2;
+
+            background: $red-light;
+            color: $brown-text;
+            font-family: "Raleway";
+            font-size: 16px;
         }
     }
-}
-.fixed-bottom-right {
-    position: fixed;
-    right: $unit;
-    bottom: $unit;
-
-    .button__text {
-        font-size: 26px;
-    }
-}
-.tooltip__text {
-    font-size: $font-title;
-    padding: $unit*3;
 }
