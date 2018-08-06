@@ -1,0 +1,11 @@
+@import 'Const';
+
+.page--home {
+    background: $white;
+
+    .call-to-action {
+        .call-to-action__background {
+            width: 100%;
+        }
+    }
+}

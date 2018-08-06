@@ -1,29 +1,37 @@
 @import 'Const';
 
 .page--sitedown {
-    background: $brown-text;
+    padding-bottom: 100px;
+    background: $cream;
 
     .message {
-        margin-top: 10%;
+        margin: 10% $unit*2 auto;
+        @media screen and (orientation: landscape) {
+            margin-top: $unit*2;
+        }
         @include layout('gt-sm') {
-            margin-top: 200px;
+            margin-top: 10%;
         }
         min-height: 100px;
         min-width: 100px;
-        background: $brown-light;
+    }
+    .message__img {
+        max-width: 200px;
+        margin: $unit*2;
+    }
+    .message__text {
+        margin: $unit*2 $unit*2 0;
+        padding: $unit*2;
 
-        .message__img {
-            max-width: 200px;
-            margin: $unit*2;
-        }
-        .message__text {
-            margin: $unit*2 $unit*2 0;
-            padding: $unit*2;
-
-            background: $red-light;
-            color: $brown-text;
-            font-family: "Raleway";
+        background: $red-light;
+        color: $red-text;
+        font-family: "Raleway";
+        font-size: 14px;
+        @include layout('gt-sm') {
             font-size: 16px;
+        }
+        @include layout('gt-md') {
+            font-size: 20px;
         }
     }
 }
