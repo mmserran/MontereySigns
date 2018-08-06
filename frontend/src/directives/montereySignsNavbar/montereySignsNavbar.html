@@ -1,9 +1,32 @@
-<md-toolbar class="md-hue-2">
-    <div class="md-toolbar-tools">
-        <md-button class="button"
-                   ng-repeat="key in list_nav"
-                   aria-label="{{key | translate}}">
-            <span ng-bind="key | translate"></span>
-        </md-button>
+<md-toolbar class="navbar md-hue-2"
+            layout="row" layout-align="center center"
+            md-no-ink>
+    <div class="md-toolbar-tools"
+         layout="row" layout-align="center center">
+        <div ng-repeat="obj in list_nav">
+            <md-menu ng-if="(css.is_image(obj) === false)"
+                     md-position-mode="target bottom">
+                <md-button class="navbar__button"
+                           ng-class="{'highlight': (css.current_subnav === obj)}"
+                           ng-mouseenter="btn.close_subnav(obj); btn.open_subnav($mdMenu, $event, obj)"
+                           ng-href="{{obj[Const.P.Url]}}"
+                           aria-label="{{obj[Const.P.Key]| translate}}">
+                    <span ng-bind-html="obj[Const.P.Key] | translate"></span>
+                </md-button>
+                <md-menu-content width="4"
+                                 ng-mouseleave="btn.close_subnav(obj)">
+                    <md-menu-item ng-repeat="subnav in obj[Const.P.Subnav]">
+                        <md-button class="navbar__subnav-btn"
+                                   aria-label="{{subnav[Const.P.Key]| translate}}"
+                                   ng-href="{{subnav[Const.P.Url]}}">
+                            <span ng-bind="subnav[Const.P.Key] | translate"></span>
+                        </md-button>
+                    </md-menu-item>
+                </md-menu-content>
+            </md-menu>
+            <img class="navbar__image"
+                 ng-if="(css.is_image(obj) === true)"
+                 src="/resources/img/monterey-signs.png" />
+        </div>
     </div>
 </md-toolbar>

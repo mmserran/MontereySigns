@@ -11,18 +11,3 @@ html, body {
     height: 100vh;
     background: transparent;
 }
-.button-container {
-    width: 100%;
-    text-align: center;
-}
-.button {
-    min-width: 130px;
-    padding: 0 $unit*4;
-
-    letter-spacing: 2.45px;
-    font-size: 12px;
-    font-family: "Raleway";
-    color: $white;
-    border: 1px solid $white;
-    background: $gray;
-}

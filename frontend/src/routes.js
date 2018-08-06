@@ -1,5 +1,7 @@
 angular.module("monterey-signs.routing")
         .config(function ($routeProvider, $locationProvider) {
+            $locationProvider.html5Mode(true);
+    
             $routeProvider.when('/sitedown', {
                 templateUrl: 'frontend/src/pages/sitedown/sitedown.html',
                 controller: 'SiteDownCtrl',

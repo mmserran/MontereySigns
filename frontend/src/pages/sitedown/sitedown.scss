@@ -1,12 +1,13 @@
 @import 'Const';
 
 .page--sitedown {
-    background: $cream;
+    background: $white;
 
     .page__content {
         padding-bottom: 100px;
     }
     .message {
+        background: $cream;
         margin: 10% $unit*2 auto;
         @media screen and (orientation: landscape) {
             margin-top: $unit*2;
@@ -35,5 +36,21 @@
         @include layout('gt-md') {
             font-size: 20px;
         }
+    }
+
+    .button-container {
+        width: 100%;
+        text-align: center;
+    }
+    .button {
+        min-width: 130px;
+        padding: 0 $unit*4;
+
+        letter-spacing: 2.45px;
+        font-size: 12px;
+        font-family: "Raleway";
+        color: $brown-dark;
+        border: 1px solid $brown-dark;
+        background: $gray;
     }
 }

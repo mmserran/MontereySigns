@@ -1,1 +1,68 @@
 @import 'Const';
+
+$navbar-height: 92px;
+@include layout('gt-sm') {
+    md-backdrop.md-menu-backdrop,
+    .md-scroll-mask {
+        top: $navbar-height;
+    }
+    .navbar, .navbar__button {
+        min-height: $navbar-height;
+        line-height: $navbar-height;
+    }
+}
+.md-open-menu-container {
+    border-top: 1px solid $blue-hover;
+    border-radius: 1px;
+    opacity: 0.9 !important;
+
+    .navbar__subnav-btn {
+        padding: 0 $unit*5.5;
+        font-size: 12px;
+        line-height: $unit*5.5;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        color: $brown-dark;
+    }
+}
+.navbar__button {
+    display: none;
+    height: 100%;
+    letter-spacing: 2px;
+    font-size: $font-text;
+
+    @include layout('gt-sm') {
+        display: block;
+        margin: auto $unit*2;
+    }
+    @include layout('gt-md') {
+        letter-spacing: 2.5px;
+        margin: auto $unit*4;
+    }
+
+    &.highlight span,
+    &:hover span {
+        color: $blue-hover;
+    }
+
+    &:not([disabled]) {
+        &:hover, &.md-focused {
+            background: transparent;
+        }
+    }
+}
+.navbar__image {
+    position: relative;
+
+    top: 50px;
+    height: 140px;
+
+    @include layout('gt-sm') {
+        top: 55px;
+        height: 180px;
+    }
+    @include layout('gt-md') {
+        top: 67px;
+        height: 221px;
+    }
+}
