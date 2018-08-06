@@ -1,0 +1,9 @@
+<md-toolbar class="md-hue-2">
+    <div class="md-toolbar-tools">
+        <md-button class="button"
+                   ng-repeat="key in list_nav"
+                   aria-label="{{key | translate}}">
+            <span ng-bind="key | translate"></span>
+        </md-button>
+    </div>
+</md-toolbar>

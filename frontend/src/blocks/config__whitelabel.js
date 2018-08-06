@@ -21,13 +21,13 @@ angular.module("monterey-signs.blocks")
                     '500': '006BB6', // hue default
                     '600': '0063AF',
                     '700': '0058A6',
-                    '800': '0058A6', // hue 2
+                    '800': 'FFFFFF', // hue 2
                     '900': '003C8E',
                     'A100': '003C8E', // hue 3
                     'A200': '87B0FF',
                     'A400': '548EFF',
                     'A700': '3B7EFF',
-                    'contrastDefaultColor': 'light'
+                    'contrastDefaultColor': 'dark'
                 });
             }
             function define_secondary_palette(label) {

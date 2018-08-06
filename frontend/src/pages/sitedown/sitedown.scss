@@ -1,9 +1,11 @@
 @import 'Const';
 
 .page--sitedown {
-    padding-bottom: 100px;
     background: $cream;
 
+    .page__content {
+        padding-bottom: 100px;
+    }
     .message {
         margin: 10% $unit*2 auto;
         @media screen and (orientation: landscape) {
