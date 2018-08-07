@@ -54,10 +54,12 @@ $navbar-height: 92px;
 .navbar__image {
     position: relative;
 
-    top: 50px;
-    height: 140px;
+    top: 26px;
+    height: 100px;
 
+    display: none;
     @include layout('gt-sm') {
+        display: block;
         top: 55px;
         height: 180px;
     }
@@ -65,4 +67,22 @@ $navbar-height: 92px;
         top: 67px;
         height: 221px;
     }
+}
+.navbar__image--mobile,
+.toolbar__menu--mobile {
+    display: block;
+    @include layout('gt-sm') {
+        display: none;
+    }
+}
+.navbar__image--mobile {
+    margin: 0 $unit*4;
+}
+.toolbar__menu--mobile {
+    .toolbar__btn {
+        margin: 0;
+    }
+}
+.md-toolbar-tools {
+    padding: 0;
 }

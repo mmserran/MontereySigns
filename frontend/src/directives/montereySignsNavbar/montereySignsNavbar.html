@@ -2,7 +2,14 @@
             layout="row" layout-align="center center"
             md-no-ink>
     <div class="md-toolbar-tools"
-         layout="row" layout-align="center center">
+         layout="row" layout-align="space-between center"
+         layout-gt-sm="row" layout-align-gt-sm="center center">
+        <div class="toolbar__menu--mobile">
+            <md-button class="toolbar__btn" aria-label="Mobile Menu"
+                       ng-click="btn.toggle_mobile_menu(); $event.stopPropagation()">
+                <hamburger-animation data-is-active="{{css.show_mobile_menu}}"></hamburger-animation>
+            </md-button>
+        </div>
         <div ng-repeat="obj in list_nav">
             <md-menu ng-if="(css.is_image(obj) === false)"
                      md-position-mode="target bottom">
@@ -31,5 +38,7 @@
                  ng-if="(css.is_image(obj) === true)"
                  src="/resources/img/monterey-signs.png" />
         </div>
+        <img class="navbar__image navbar__image--mobile"
+             src="/resources/img/monterey-signs.png" />
     </div>
 </md-toolbar>

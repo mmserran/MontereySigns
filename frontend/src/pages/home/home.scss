@@ -196,7 +196,7 @@
         .contact-us {
             .footer__description {
                 padding: 0 $unit*2;
-                
+
                 &.spacer {
                     padding: $unit*2;
                 }
@@ -213,6 +213,35 @@
             @include layout('gt-sm') {
                 display: block;   
             }
+        }
+    }
+    .md-sidenav-right {
+        .md-button:hover {
+            color: $blue-hover;
+        }
+        .item {
+            height: 40px;
+            min-height: 40px;
+        }
+        .item--title {
+            padding: $unit*2;
+            font-size: 55px;
+            font-family: 'SignPainter';
+        }
+        .item--main .md-button {
+            font-family: 'Raleway';
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 2.5px;
+        }
+        .item--sub .md-button {
+            padding: 0 $unit*3;
+            font-family: 'Raleway';
+            font-size: 13px;
+            letter-spacing: 0;
+        }
+        .callToAction__btn {
+            margin: auto;
         }
     }
 }

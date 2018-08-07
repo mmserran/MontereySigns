@@ -1,5 +1,5 @@
 angular.module("monterey-signs.directives")
-        .directive("montereySignsNavbar", function (Const, $timeout) {
+        .directive("montereySignsNavbar", function (Const, $timeout, $mdSidenav) {
             var directive_def = {
                 restrict: 'E',
                 replace: true,
@@ -17,10 +17,12 @@ angular.module("monterey-signs.directives")
                 scope.css = {
                     is_image: is_image,
                     current_subnav: null,
+                    show_mobile_menu: false,
                 };
                 scope.btn = {
                     open_subnav: open_subnav,
                     close_subnav: close_subnav,
+                    toggle_mobile_menu: toggle_mobile_menu,
                 };
 
                 scope.list_nav = Const.Navbar;
@@ -60,10 +62,33 @@ angular.module("monterey-signs.directives")
                         scope.css.current_subnav = null;
                     }
                 }
+                function toggle_mobile_menu() {
+                    $mdSidenav('right').toggle();
+                    scope.css.show_mobile_menu = !scope.css.show_mobile_menu;
+                    _attach_fn_to_mobile_backdrop();
+                }
+                function close_mobile_menu() {
+                    $mdSidenav('right').close();
+                    scope.css.show_mobile_menu = false;
+                }
                 function _attach_fn_to_backdrop() {
                     $timeout(function () {
                         var backdrop = angular.element(document.body.querySelector('.md-menu-backdrop.md-click-catcher'));
                         backdrop.on('mouseenter', close_subnav);
+
+                        backdrop.on('$destroy', function () {
+                            backdrop.off('mouseenter', close_subnav);
+                        });
+                    });
+                }
+                function _attach_fn_to_mobile_backdrop() {
+                    $timeout(function () {
+                        var backdrop = angular.element(document.body.querySelector('.md-sidenav-backdrop'));
+                        backdrop.bind('click', close_mobile_menu);
+
+                        backdrop.on('$destroy', function () {
+                            backdrop.unbind('click', close_mobile_menu);
+                        });
                     });
                 }
             }

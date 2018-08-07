@@ -2,6 +2,85 @@
      layout-fill
      layout="column" layout-align="start center">
     <monterey-signs-navbar data-show-search-bar="true"></monterey-signs-navbar>
+    <md-sidenav class="md-sidenav-right"
+                md-component-id="right">
+        <md-list flex>
+        <md-subheader class="md-no-sticky item item--title"
+                      translate="Monterey Signs"></md-subheader>
+        <md-list-item class="md-1-line item item--main"
+                      aria-label="Monterey Signs"
+                      ng-click="page.btn.goto_url(Const.Url.Sitedown)">
+            <div class="md-list-item-text" layout="column">
+                <h3 translate="choose_sign"></h3>
+            </div>
+        </md-list-item>
+        <md-divider ></md-divider>
+        <md-list-item class="md-1-line item item--sub"
+                      aria-label="commercial"
+                      ng-click="page.btn.goto_url(Const.Url.Sitedown)">
+            <div class="md-list-item-text" layout="column">
+                <h4 translate="commercial"></h3>
+            </div>
+        </md-list-item>
+        <md-list-item class="md-1-line item item--sub"
+                      aria-label="electrical"
+                      ng-click="page.btn.goto_url(Const.Url.Sitedown)">
+            <div class="md-list-item-text" layout="column">
+                <h4 translate="electrical"></h3>
+            </div>
+        </md-list-item>
+        <md-list-item class="md-1-line item item--sub"
+                      aria-label="print"
+                      ng-click="page.btn.goto_url(Const.Url.Sitedown)">
+            <div class="md-list-item-text" layout="column">
+                <h4 translate="print"></h3>
+            </div>
+        </md-list-item>
+        <md-list-item class="md-1-line item item--sub"
+                      aria-label="services"
+                      ng-click="page.btn.goto_url(Const.Url.Sitedown)">
+            <div class="md-list-item-text" layout="column">
+                <h4 translate="services"></h3>
+            </div>
+        </md-list-item>
+        <md-divider ></md-divider>
+        <md-list-item class="md-1-line item item--main"
+                      aria-label="our_work"
+                      ng-click="page.btn.goto_url(Const.Url.Sitedown)">
+            <div class="md-list-item-text" layout="column">
+                <h3 translate="our_work"></h3>
+            </div>
+        </md-list-item>
+        <md-list-item class="md-1-line item item--main"
+                      aria-label="sign_stories"
+                      ng-click="page.btn.goto_url(Const.Url.Sitedown)">
+            <div class="md-list-item-text" layout="column">
+                <h3 translate="sign_stories"></h3>
+            </div>
+        </md-list-item>
+        <md-list-item class="md-1-line item item--main"
+                      aria-label="about_us"
+                      ng-click="page.btn.goto_url(Const.Url.Sitedown)">
+            <div class="md-list-item-text" layout="column">
+                <h3 translate="about_us"></h3>
+            </div>
+        </md-list-item>
+        <md-list-item class="md-1-line item item--main"
+                      aria-label="nuts_bolts"
+                      ng-click="page.btn.goto_url(Const.Url.Sitedown)">
+            <div class="md-list-item-text" layout="column">
+                <h3 translate="nuts_bolts"></h3>
+            </div>
+        </md-list-item>
+        <md-divider ></md-divider>
+        <div class="callToAction button--brown"
+             layout="row" layout="center center">
+            <md-button class="callToAction__btn"
+                       aria-label="{{'btn_get_quote'| translate}}"
+                       ng-click="page.btn.goto_url(Const.Url.Sitedown)"
+                       ng-bind="'btn_get_quote' | translate"></md-button>
+        </div>
+    </md-sidenav>
     <md-content class="page__content"
                 flex
                 layout="column" layout-align="start space-around">
