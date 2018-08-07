@@ -1,11 +1,26 @@
 <div class="page--home"
+     layout-fill
      layout="column" layout-align="start center">
     <monterey-signs-navbar data-show-search-bar="true"></monterey-signs-navbar>
     <md-content class="page__content"
-                layout-fill>
+                flex
+                layout="column" layout-align="start space-around">
         <div class="call-to-action">
-            <img class="call-to-action__background"
-                 src="/resources/img/cannery-row_1.png" />
+            <div class="call-to-action__image"></div>
+        </div>
+        <div class="grid-list"
+             layout-wrap
+             layout="row" layout-align="space-around space-around">
+            <div class="grid-list__item"
+                 ng-class="{
+                     'grid-list__item--left': ($even === true),
+                     'grid-list__item--right': ($even === false),
+                 }"
+                 ng-repeat="obj in page.template.list_type"
+                 flex="100" flex-gt-sm="50">
+                <div flex
+                     style="background: url('{{obj[Const.P.Image]}}'); background-size: cover"></div>
+            </div>
         </div>
     </md-content>
 </div>

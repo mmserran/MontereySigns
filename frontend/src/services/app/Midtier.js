@@ -4,16 +4,13 @@ angular.module("monterey-signs.services")
 
             // -- Service -- //
             return (self = {
-                my_portfolio: new Request.cached(function (has_access) {
+                home: new Request.cached(function () {
                     var get = {}, post = {};
                     var config = {
-                        method: 'POST',
-                        url: '/landing/my_portfolio',
+                        method: 'GET',
+                        url: '/landing/home',
                         params: get,
-                        data: post,
                     };
-
-                    post[Const.P.HasAccess] = (has_access === true);
 
                     return $http(config);
                 }),

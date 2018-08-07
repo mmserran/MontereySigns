@@ -4,8 +4,32 @@
     background: $white;
 
     .call-to-action {
-        .call-to-action__background {
-            width: 100%;
+        height: 583px;
+
+        .call-to-action__image {
+            background: url('/resources/img/cannery-row_2.png');
+            background-size: cover;
+            background-position-x: 50%;
+            height: 100%;
+            width: 100vw;
+        }
+    }
+
+    $gutter-space: $unit;
+    .grid-list {
+        .grid-list__item > * {
+            height: 300px;
+            margin: $gutter-space/2;
+        }
+        margin: $gutter-space/2;
+        @include layout('gt-sm') {
+            margin: $gutter-space/2 0;
+            .grid-list__item--left > * {
+                margin-left: 0;
+            }
+            .grid-list__item--right > * {
+                margin-right: 0;
+            }
         }
     }
 }

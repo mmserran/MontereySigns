@@ -15,6 +15,9 @@
                 </md-button>
                 <md-menu-content width="4"
                                  ng-mouseleave="btn.close_subnav(obj)">
+                    <md-menu-item style="display: none">
+                        <span><!-- will select this empty option by default --></span>
+                    </md-menu-item>
                     <md-menu-item ng-repeat="subnav in obj[Const.P.Subnav]">
                         <md-button class="navbar__subnav-btn"
                                    aria-label="{{subnav[Const.P.Key]| translate}}"
