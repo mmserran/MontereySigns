@@ -41,8 +41,8 @@
                 <div class="split-container__item our-clients"
                      layout="column" layout-align="start center"
                      flex="50">
-                     <span class="item__title"
-                           translate="our_clients"></span>
+                    <span class="item__title"
+                          translate="our_clients"></span>
                     <div class="client-grid"
                          layout-wrap
                          layout="row" layout-align="start start">
@@ -55,14 +55,14 @@
                 <div class="split-container__item have-questions"
                      layout="column" layout-align="start center"
                      flex="50">
-                     <span class="item__title"
-                           translate="questions"></span>
-                     <span class="item__description"
-                           translate="more_info_2a"></span>
-                     <span class="item__description"
-                           translate="more_info_2b"></span>
-                     <span class="item__description"
-                           translate="more_info_2c"></span>
+                    <span class="item__title"
+                          translate="questions"></span>
+                    <span class="item__description"
+                          translate="more_info_2a"></span>
+                    <span class="item__description"
+                          translate="more_info_2b"></span>
+                    <span class="item__description"
+                          translate="more_info_2c"></span>
                     <div class="callToAction button--light-brown">
                         <md-button class="callToAction__btn"
                                    aria-label="{{'contact_us'| translate}}"
@@ -94,13 +94,81 @@
                      style="background: url({{image}})"></div>
             </div>
             <div class="footer"
-                 layout="row" layout-align="start space-between">
-                footer
-                <div class="callToAction">
-                    <md-button class="callToAction__btn"
-                               aria-label="{{'btn_get_quote'| translate}}"
-                               ng-click="page.btn.goto_url(Const.Url.Sitedown)"
-                               ng-bind="'btn_get_quote' | translate"></md-button>
+                 layout="column" layout-align="start center"
+                 layout-gt-xs="row" layout-align-gt-xs="start space-between">
+                <div class="footer__section sitemap"
+                     flex="33"
+                     layout="column" layout-align="start center"
+                     layout-gt-sm="column" layout-align-gt-sm="start start">
+                    <span class="footer__title"
+                          translate="choose_sign"
+                          ng-click="page.btn.goto_url(Const.Url.Sitedown)"></span>
+                    <div class="spacer"
+                         layout="column" layout-align="start start">
+                        <span class="footer__description"
+                              ng-click="page.btn.goto_url(Const.Url.Sitedown)"
+                              translate="commercial"></span>
+                        <span class="footer__description"
+                              ng-click="page.btn.goto_url(Const.Url.Sitedown)"
+                              translate="electrical"></span>
+                        <span class="footer__description"
+                              ng-click="page.btn.goto_url(Const.Url.Sitedown)"
+                              translate="print"></span>
+                        <span class="footer__description"
+                              ng-click="page.btn.goto_url(Const.Url.Sitedown)"
+                              translate="services"></span>
+                    </div>
+                    <span class="footer__title compact"
+                          ng-click="page.btn.goto_url(Const.Url.Sitedown)"
+                          translate="our_work"></span>
+                    <span class="footer__title compact"
+                          ng-click="page.btn.goto_url(Const.Url.Sitedown)"
+                          translate="sign_stories"></span>
+                    <span class="footer__title compact"
+                          ng-click="page.btn.goto_url(Const.Url.Sitedown)"
+                          translate="about_us"></span>
+                    <span class="footer__title compact"
+                          ng-click="page.btn.goto_url(Const.Url.Sitedown)"
+                          translate="nuts_bolts"></span>
+                </div>
+                <div class="footer__section get-started"
+                     flex="33"
+                     layout="column" layout-align="start center">
+                    <span class="footer__title"
+                          translate="get_started"></span>
+                    <span class="footer__description"
+                          translate="get_started_info"></span>
+                    <div class="callToAction">
+                        <md-button class="callToAction__btn"
+                                   aria-label="{{'btn_get_quote'| translate}}"
+                                   ng-click="page.btn.goto_url(Const.Url.Sitedown)"
+                                   ng-bind="'btn_get_quote' | translate"></md-button>
+                    </div>
+                    <div class="social-media-bar"
+                         layout="row" layout-align="center center">
+                        <md-icon md-svg-icon="social:facebook" aria-label="facebook"></md-icon>
+                        <md-icon md-svg-icon="social:instagram" aria-label="instagram"></md-icon>
+                        <md-icon md-svg-icon="social:yelp" aria-label="yelp"></md-icon>
+                    </div>
+                </div>
+                <div class="footer__section contact-us"
+                     flex="33"
+                     layout="column" layout-align="start center"
+                     layout-gt-sm="column" layout-align-gt-sm="start end">
+                    <div layout="column" layout-align="start start">
+                        <span class="footer__title"
+                              translate="contact_us"></span>
+                        <span class="footer__description"
+                              translate="entity_name"></span>
+                        <span class="footer__description"
+                              translate="address1"></span>
+                        <span class="footer__description"
+                              translate="address2"></span>
+                        <span class="footer__description spacer"
+                              translate="phone"></span>
+                        <span class="footer__description"
+                              translate="email"></span>
+                    </div>
                 </div>
             </div>
             <div class="copyright"

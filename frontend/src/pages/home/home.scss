@@ -152,8 +152,56 @@
     }
     .footer {
         background: $brown-dark;
-        min-height: 200px;
-        color: $brown-text;
+        color: $cream;
+
+        .footer__section {
+            min-height: 300px;
+            height: 300px;
+            width: 100%;
+        }
+        .footer__title {
+            padding: $unit*2;
+            font-size: 12px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+        }
+        .footer__description {
+            line-height: 23px;
+            font-size: 13px;
+            letter-spacing: 0;
+        }
+        .sitemap {
+            .footer__title.compact {
+                padding: $unit $unit*2;
+                cursor: pointer;
+            }
+            .footer__description {
+                padding: 0 $unit*2;
+                cursor: pointer;
+            }
+            .spacer {
+                padding-bottom: $unit;
+            }
+        }
+        .get-started {
+            text-align: center;
+            .footer__description {
+                padding: $unit*2;
+            }
+            .social-media-bar md-icon {
+                color: $white;
+                margin: $unit;
+            }
+        }
+        .contact-us {
+            .footer__description {
+                padding: 0 $unit*2;
+                
+                &.spacer {
+                    padding: $unit*2;
+                }
+            }
+        }
     }
     .copyright {
         padding: $unit;
