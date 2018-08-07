@@ -47,22 +47,46 @@
         height: 130px;
         width: 100%;
         background: $brown-dark;
-        
+
         .callToAction {
             margin: $unit;
         }
     }
     .split-container {
         .split-container__item {
-            height: 300px;
+            padding: $unit*2 0;
+            
+            height: 619px;
+            @include layout('xs') {
+                min-height: 840px;
+                max-height: 840px;
+            }
+            @media screen and (min-width: 480px) {
+                min-height: 619px;
+                max-height: 619px;
+            }
+
+            .item__title {
+                margin: $unit*4 $unit*4 $unit*2;
+                color: $brown-med;
+                font-size: 55px;
+                font-family: 'SignPainter';
+                text-align: center;
+                text-transform: capitalize;
+            }
+            .item__description {
+                text-align: center;
+                padding: $unit*2 $unit*6;
+                line-height: 24px;
+                font-size: 15px;
+                color: $brown-dark;
+            }
         }
         .our-clients {
             background: $cream;
-            min-height: 300px;
         }
         .have-questions {
             background: $gray;
-            min-height: 300px;
         }
     }
     .social-media {

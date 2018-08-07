@@ -36,20 +36,32 @@
                 </div>
             </div>
             <div class="split-container"
-                 layout="row" layout-align="start center">
+                 layout="column" layout-align="start center"
+                 layout-gt-sm="row" layout-align-gt-sm="start center">
                 <div class="split-container__item our-clients"
+                     layout="column" layout-align="start center"
                      flex="50">
+                     <span class="item__title"
+                           translate="our_clients"></span>
                     left
                 </div>
                 <div class="split-container__item have-questions"
+                     layout="column" layout-align="start center"
                      flex="50">
-                    right
-                <div class="callToAction button--light-brown">
-                    <md-button class="callToAction__btn"
-                               aria-label="{{'contact_us'| translate}}"
-                               ng-click="page.btn.goto_url(Const.Url.Sitedown)"
-                               ng-bind="'contact_us' | translate"></md-button>
-                </div>
+                     <span class="item__title"
+                           translate="questions"></span>
+                     <span class="item__description"
+                           translate="more_info_2a"></span>
+                     <span class="item__description"
+                           translate="more_info_2b"></span>
+                     <span class="item__description"
+                           translate="more_info_2c"></span>
+                    <div class="callToAction button--light-brown">
+                        <md-button class="callToAction__btn"
+                                   aria-label="{{'contact_us'| translate}}"
+                                   ng-click="page.btn.goto_url(Const.Url.Sitedown)"
+                                   ng-bind="'contact_us' | translate"></md-button>
+                    </div>
                 </div>
             </div>
             <div class="social-media"
