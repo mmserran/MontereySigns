@@ -40,11 +40,17 @@
             }
         }
     }
+    .bottom-container {
+        z-index: 1;
+    }
     .get-a-quote {
-        z-index: 50;
         height: 130px;
         width: 100%;
         background: $brown-dark;
+        
+        .callToAction {
+            margin: $unit;
+        }
     }
     .split-container {
         .split-container__item {
@@ -61,6 +67,24 @@
     }
     .social-media {
         min-height: 220px;
+        margin: $unit*2;
+        color: $brown-med;
+
+        .social-media__handle {
+            padding: $unit*2;
+            font-size: 12px;
+            letter-spacing: 2.45px;
+            color: $brown-dark;
+            text-transform: uppercase;
+        }
+        .social-media__follow-us-title {
+            font-size: 60px;
+            font-family: 'SignPainter';
+            text-align: center;
+        }
+        .callToAction {
+            padding-bottom: $unit*6;
+        }
     }
     .image-belt {
         background: $cream;
@@ -69,8 +93,18 @@
     .footer {
         background: $brown-dark;
         min-height: 200px;
+        color: $brown-text;
     }
     .copyright {
+        padding: $unit;
         background: $brown-dark;
+        color: $brown-text;
+
+        .copyright__divider{
+            display: none;   
+            @include layout('gt-sm') {
+                display: block;   
+            }
+        }
     }
 }

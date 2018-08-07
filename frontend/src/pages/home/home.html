@@ -28,7 +28,12 @@
         <div class="bottom-container">
             <div class="get-a-quote"
                  layout="column" layout-align="center center">
-                btn
+                <div class="callToAction">
+                    <md-button class="callToAction__btn"
+                               aria-label="{{'btn_get_quote'| translate}}"
+                               ng-click="page.btn.goto_url(Const.Url.Sitedown)"
+                               ng-bind="'btn_get_quote' | translate"></md-button>
+                </div>
             </div>
             <div class="split-container"
                  layout="row" layout-align="start center">
@@ -39,11 +44,26 @@
                 <div class="split-container__item have-questions"
                      flex="50">
                     right
+                <div class="callToAction button--light-brown">
+                    <md-button class="callToAction__btn"
+                               aria-label="{{'contact_us'| translate}}"
+                               ng-click="page.btn.goto_url(Const.Url.Sitedown)"
+                               ng-bind="'contact_us' | translate"></md-button>
+                </div>
                 </div>
             </div>
             <div class="social-media"
                  layout="column" layout-align="center center">
-                instagram
+                <span class="social-media__handle"
+                      translate="twitter_handle"></span>
+                <span class="social-media__follow-us-title"
+                      translate="instagram"></span>
+                <div class="callToAction button--brown">
+                    <md-button class="callToAction__btn"
+                               aria-label="{{'btn_follow'| translate}}"
+                               ng-click="page.btn.goto_url(Const.Url.Sitedown)"
+                               ng-bind="'btn_follow' | translate"></md-button>
+                </div>
             </div>
             <div class="image-belt"
                  layout="row" layout-align="start start">
@@ -52,10 +72,21 @@
             <div class="footer"
                  layout="row" layout-align="start space-between">
                 footer
+                <div class="callToAction">
+                    <md-button class="callToAction__btn"
+                               aria-label="{{'btn_get_quote'| translate}}"
+                               ng-click="page.btn.goto_url(Const.Url.Sitedown)"
+                               ng-bind="'btn_get_quote' | translate"></md-button>
+                </div>
             </div>
             <div class="copyright"
-                 layout="row" layout-align="center center">
-                copyright
+                 layout="column" layout-align="center center"
+                 layout-gt-sm="row" layout-align-gt-sm="center center">
+                <span translate="copyright1"
+                      translate-values="{year: Const.Default.Year}"></span>
+                <span class="copyright__divider">&nbsp;|&nbsp;</span>
+                <span translate="copyright2"
+                      translate-values="{year: Const.Default.Year}"></span>
             </div>
         </div>
     </md-content>

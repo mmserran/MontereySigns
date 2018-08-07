@@ -21,7 +21,7 @@ angular.module("monterey-signs.blocks")
                         // home
                 , "monterey_signs": "monterey's favorite sign shop"
                 , "blurb_placeholder": "this is a blurb about {{type}}{{ type === 'services' ? '' : ' products'}}"
-                , "btn_explore": "explore {{ type }} →"
+                , "btn_explore": "explore {{ type }}"
                 , "btn_get_quote": "get a quote"
                 , "our_clients": "our clients"
                 , "questions": "have questions?"
@@ -31,7 +31,7 @@ angular.module("monterey-signs.blocks")
                 , "more_info_2b": "Santa Cruz Signs and Monterey Signs are owned and operated by the same family. Our attention to detail, and attention to our customers, has earned us the reputation as the premier full service sign company on the Central Coast."
                 , "more_info_2c": "We look forward to working with you."
                 , "twitter_handle": "@montereysigns"
-                , "instagram": "follow us on Instagram"
+                , "instagram": "Follow us on Instagram"
                 , "btn_follow": "follow us"
 
                         // footer
@@ -43,6 +43,7 @@ angular.module("monterey-signs.blocks")
                 , "address2": "Seaside, CA 93955"
                 , "phone": "831-632-0490"
                 , "email": "sales@MontereySigns.com"
-                , "copyright": "Copyright © {{ year }} Monterey Signs | Web Design by Sleepless Media"
+                , "copyright1": "Copyright © {{ year }} Monterey Signs"
+                , "copyright2": "Web Design by Sleepless Media"
             });
         });
