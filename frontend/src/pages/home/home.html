@@ -12,14 +12,15 @@
              layout-wrap
              layout="row" layout-align="space-around space-around">
             <div class="grid-list__item"
-                 ng-class="{
-                     'grid-list__item--left': ($even === true),
-                     'grid-list__item--right': ($even === false),
-                 }"
+                 ng-class="{'grid-list__item--left': ($even === true),
+                            'grid-list__item--right': ($even === false)}"
                  ng-repeat="obj in page.template.list_type"
                  flex="100" flex-gt-sm="50">
-                <div flex
-                     style="background: url('{{obj[Const.P.Image]}}'); background-size: cover"></div>
+                <sign-type-panel flex
+                                 data-goto-url="{{obj[Const.P.Url]}}"
+                                 data-key="{{obj[Const.P.Key]}}"
+                                 data-show-blurb="true"
+                                 data-image-url="{{obj[Const.P.Image]}}"></sign-type-panel>
             </div>
         </div>
     </md-content>

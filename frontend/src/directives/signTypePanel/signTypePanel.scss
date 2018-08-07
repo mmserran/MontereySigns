@@ -1,0 +1,48 @@
+@import 'Const';
+
+.signTypePanel {
+    .overlay {
+        position: relative;
+        height: 100%;
+    }
+    .text {
+        top: -185%;
+        letter-spacing: 0;
+        color: $white;
+        text-transform: capitalize;
+        transition: 0.4s all ease;
+
+        .text__title {
+            font-size: 55px;
+            font-family: 'SignPainter';
+        }
+        .text__blurb {
+            margin-bottom: $unit*2;
+            font-size: 15px;
+        }
+        .text__blurb,
+        .text__call-to-action {
+            opacity: 0;
+        }
+
+        &.text--show-it {
+            top: -200%;
+
+            .text__blurb,
+            .text__call-to-action {
+                opacity: 1;
+            }
+        }
+    }
+}
+.signTypePanel__image {
+    height: 100%;
+}
+.signTypePanel__shade {
+    top: -100%;
+    transition: 0.4s all ease;
+    background: rgba($black, 0.37);
+}
+.signTypePanel__shade--dark {
+    background: rgba($black, 0.80);
+}

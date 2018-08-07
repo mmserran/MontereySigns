@@ -1,0 +1,20 @@
+@import 'Const';
+
+.callToAction {
+    margin: 20px $unit $unit;
+    
+    .callToAction__btn {
+        margin: 0;
+        padding: 0 $unit*2;
+        
+        border: 1px solid $white;
+        border-radius: 0;
+        letter-spacing: 2.45px;
+        font-size: 12px;
+        
+        &:hover {
+            border-color: $blue-hover;
+            background: $blue-hover;
+        }
+    }
+}

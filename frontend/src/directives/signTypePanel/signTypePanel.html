@@ -1,0 +1,17 @@
+<div class="signTypePanel">
+    <div class="signTypePanel__image"></div>
+    <div class="overlay signTypePanel__shade"></div>
+    <div class="overlay text"
+         layout="column" layout-align="center center">
+        <span class="text__title"
+              ng-bind="settings.key | translate"></span>
+        <span class="text__blurb"
+              ng-if="settings.show_blurb"
+              translate="blurb_placeholder"
+              translate-values="{type: settings.key}"></span>
+        <call-to-action class="text__call-to-action"
+                        data-key="{{settings.key}}"
+                        data-show-blurb="{{settings.show_blurb}}"
+                        data-goto-url="{{settings.url}}"></call-to-action>
+    </div>
+</div>
