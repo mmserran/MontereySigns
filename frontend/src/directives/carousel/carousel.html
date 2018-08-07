@@ -1,0 +1,12 @@
+<div class="carousel">
+    <div class="carousel__image"></div>
+    <div class="overlay carousel__shade"></div>
+    <div class="overlay text"
+         layout="column" layout-align="center center">
+        <span class="text__title"
+              ng-bind="settings.key | translate"></span>
+        <call-to-action class="text__call-to-action"
+                        data-label="{{settings.label}}"
+                        ng-click="btn.goto_url(settings.url)"></call-to-action>
+    </div>
+</div>

@@ -19,6 +19,7 @@ class montereysigns_constants extends page_base {
                 'Fail'   => cst_infrastructure::fail,
             ),
             'P'              => array(
+                'Hero'   => cst_montereysigns::p_hero,
                 'Image'  => cst_montereysigns::p_image,
                 'Info'   => cst_montereysigns::p_info,
                 'Key'    => cst_montereysigns::p_key,

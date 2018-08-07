@@ -1,0 +1,30 @@
+@import 'Const';
+
+.carousel {
+    .overlay {
+        position: relative;
+        height: 100%;
+    }
+    .text {
+        top: -200%;
+        letter-spacing: 0;
+        color: $white;
+        text-transform: capitalize;
+        transition: 0.4s all ease;
+
+        .text__title {
+            padding: $unit*3;
+            text-align: center;
+            font-size: 55px;
+            font-family: 'SignPainter';
+        }
+    }
+}
+.carousel__image {
+    height: 100%;
+}
+.carousel__shade {
+    top: -100%;
+    transition: 0.4s all ease;
+    background: rgba($black, 0.37);
+}

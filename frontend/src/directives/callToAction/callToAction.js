@@ -13,7 +13,7 @@ angular.module("monterey-signs.directives")
                 scope.settings = {
                     key: attrs.key,
                     goto_url: attrs.gotoUrl,
-                    label: $translate.instant('btn_explore', {type: attrs.key}),
+                    label: attrs.label,
                     show_blurb: (attrs.showBlurb == 'true'),
                 };
 

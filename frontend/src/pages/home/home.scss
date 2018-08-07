@@ -3,16 +3,9 @@
 .page--home {
     background: $white;
 
-    .call-to-action {
+    .hero {
+        min-height: 583px !important;
         height: 583px;
-
-        .call-to-action__image {
-            background: url('/resources/img/cannery-row_2.png');
-            background-size: cover;
-            background-position-x: 50%;
-            height: 100%;
-            width: 100vw;
-        }
     }
 
     $gutter-space: $unit;

@@ -20,7 +20,7 @@ angular.module("monterey-signs.blocks")
 
                         // home
                 , "monterey_signs": "monterey's favorite sign shop"
-                , "blurb_placeholder": "this is a blurb about {{ type }} products"
+                , "blurb_placeholder": "this is a blurb about {{type}}{{ type === 'services' ? '' : ' products'}}"
                 , "btn_explore": "explore {{ type }} →"
                 , "btn_get_quote": "get a quote"
                 , "our_clients": "our clients"

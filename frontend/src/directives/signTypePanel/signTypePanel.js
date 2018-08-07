@@ -1,5 +1,5 @@
 angular.module("monterey-signs.directives")
-        .directive("signTypePanel", function (Const) {
+        .directive("signTypePanel", function (Const, $translate) {
             var directive_def = {
                 restrict: 'E',
                 replace: true,
@@ -13,6 +13,8 @@ angular.module("monterey-signs.directives")
                 scope.settings = {
                     image: attrs.imageUrl,
                     key: attrs.key,
+                    label: $translate.instant('btn_explore', {type: attrs.key}),
+                    blurb_text: $translate.instant('blurb_placeholder', {type: attrs.key}),
                     show_blurb: (attrs.showBlurb === 'true'),
                     url: attrs.gotoUrl,
                 };
