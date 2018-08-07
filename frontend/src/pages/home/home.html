@@ -8,19 +8,54 @@
         <carousel class="hero"
                   flex
                   data-hero="page.template.hero"></carousel>
-        <div class="grid-list"
-             layout-wrap
-             layout="row" layout-align="space-around space-around">
-            <div class="grid-list__item"
-                 ng-class="{'grid-list__item--left': ($even === true),
+        <div class="grid-list-container">
+            <div class="grid-list"
+                 layout-wrap
+                 layout="row" layout-align="space-around space-around">
+                <div class="grid-list__item"
+                     ng-class="{'grid-list__item--left': ($even === true),
                             'grid-list__item--right': ($even === false)}"
-                 ng-repeat="obj in page.template.list_type"
-                 flex="100" flex-gt-sm="50">
-                <sign-type-panel flex
-                                 data-goto-url="{{obj[Const.P.Url]}}"
-                                 data-key="{{obj[Const.P.Key]}}"
-                                 data-show-blurb="true"
-                                 data-image-url="{{obj[Const.P.Image]}}"></sign-type-panel>
+                     ng-repeat="obj in page.template.list_type"
+                     flex="100" flex-gt-sm="50">
+                    <sign-type-panel flex
+                                     data-goto-url="{{obj[Const.P.Url]}}"
+                                     data-key="{{obj[Const.P.Key]}}"
+                                     data-show-blurb="true"
+                                     data-image-url="{{obj[Const.P.Image]}}"></sign-type-panel>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-container">
+            <div class="get-a-quote"
+                 layout="column" layout-align="center center">
+                btn
+            </div>
+            <div class="split-container"
+                 layout="row" layout-align="start center">
+                <div class="split-container__item our-clients"
+                     flex="50">
+                    left
+                </div>
+                <div class="split-container__item have-questions"
+                     flex="50">
+                    right
+                </div>
+            </div>
+            <div class="social-media"
+                 layout="column" layout-align="center center">
+                instagram
+            </div>
+            <div class="image-belt"
+                 layout="row" layout-align="start start">
+                belt
+            </div>
+            <div class="footer"
+                 layout="row" layout-align="start space-between">
+                footer
+            </div>
+            <div class="copyright"
+                 layout="row" layout-align="center center">
+                copyright
             </div>
         </div>
     </md-content>

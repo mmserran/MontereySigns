@@ -23,6 +23,7 @@
         .text__blurb,
         .text__call-to-action {
             opacity: 0;
+            transition: 0.2s all ease;
         }
 
         &.text--show-it {
