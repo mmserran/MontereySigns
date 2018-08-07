@@ -43,7 +43,14 @@
                      flex="50">
                      <span class="item__title"
                            translate="our_clients"></span>
-                    left
+                    <div class="client-grid"
+                         layout-wrap
+                         layout="row" layout-align="start start">
+                        <img flex="50" flex-gt-xs="33"
+                             class="client-grid__item"
+                             ng-repeat="image in page.template.our_clients"
+                             ng-src="{{image}}" />
+                    </div>
                 </div>
                 <div class="split-container__item have-questions"
                      layout="column" layout-align="start center"
@@ -79,7 +86,12 @@
             </div>
             <div class="image-belt"
                  layout="row" layout-align="start start">
-                belt
+                <div flex="20"
+                     class="image-belt__item"
+                     ng-class="{'first': ($first === true),
+                                'last': ($last === true)}"
+                     ng-repeat="image in page.template.image_belt"
+                     style="background: url({{image}})"></div>
             </div>
             <div class="footer"
                  layout="row" layout-align="start space-between">

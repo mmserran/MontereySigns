@@ -55,7 +55,7 @@
     .split-container {
         .split-container__item {
             padding: $unit*2 0;
-            
+
             height: 619px;
             @include layout('xs') {
                 min-height: 840px;
@@ -84,6 +84,20 @@
         }
         .our-clients {
             background: $cream;
+            width: 100%;
+
+            .item__title {
+                margin-bottom: 0;
+            }
+
+            .client-grid {
+                width: 100%;
+                overflow: hidden;
+            }
+            .client-grid__item {
+                padding: $unit*5;
+                margin-top: $unit*-3;
+            }
         }
         .have-questions {
             background: $gray;
@@ -111,8 +125,30 @@
         }
     }
     .image-belt {
-        background: $cream;
-        min-height: 200px;
+        min-height: 100px;
+        height: 100px;
+        @include layout('gt-sm') {
+            min-height: 200px;
+            height: 200px;
+        }
+
+        .image-belt__item {
+            height: 100px;
+            min-height: 100px;
+            @include layout('gt-sm') {
+                height: 200px;
+                min-height: 200px;
+            }
+            background-size: cover !important;
+            margin: 0 $unit/2;
+
+            &.first {
+                margin-left: 0;
+            }
+            &.last {
+                margin-right: 0;
+            }
+        }
     }
     .footer {
         background: $brown-dark;

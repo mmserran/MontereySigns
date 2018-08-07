@@ -19,12 +19,14 @@ class montereysigns_constants extends page_base {
                 'Fail'   => cst_infrastructure::fail,
             ),
             'P'              => array(
-                'Hero'   => cst_montereysigns::p_hero,
-                'Image'  => cst_montereysigns::p_image,
-                'Info'   => cst_montereysigns::p_info,
-                'Key'    => cst_montereysigns::p_key,
-                'Subnav' => cst_montereysigns::p_subnav,
-                'Url'    => cst_montereysigns::p_url,
+                'Hero'       => cst_montereysigns::p_hero,
+                'Image'      => cst_montereysigns::p_image,
+                'ImageBelt'  => cst_montereysigns::p_image_belt,
+                'Info'       => cst_montereysigns::p_info,
+                'OurClients' => cst_montereysigns::p_our_clients,
+                'Key'        => cst_montereysigns::p_key,
+                'Subnav'     => cst_montereysigns::p_subnav,
+                'Url'        => cst_montereysigns::p_url,
             ),
             'Navbar'         => array(
                 array(

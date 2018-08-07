@@ -4,8 +4,10 @@ interface cst_montereysigns {
 
     const p_hero         = 'hero';
     const p_image        = 'image';
+    const p_image_belt   = 'image_belt';
     const p_info         = 'info';
     const p_key          = 'key';
+    const p_our_clients  = 'our_clients';
     const p_subnav       = 'subnav';
     const p_url          = 'url';
     //
